@@ -15,6 +15,12 @@ add_library(
         lab3.2/TransitivityClosureExperiment.h
 )
 
+add_library(
+        SetFactor
+        lab3.3/Set_Factor.cpp
+        lab3.3/Set_Factor.h
+)
+
 add_executable(
         Discrete_Math
         main.cpp
@@ -24,4 +30,5 @@ target_link_libraries(
         Discrete_Math
         Relation
         TransitivityClosureExperiment
+        SetFactor
 )

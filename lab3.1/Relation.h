@@ -6,10 +6,12 @@
 #define DISCRETE_MATH_RELATION_H
 
 #include <vector>
+#include <iostream>
+
 
 using namespace std;
 
-pair<int, int> failed;
+extern pair<int, int> failed;
 
 bool inclusionOper(vector<vector<bool>> A, vector<vector<bool>> B);
 
@@ -60,6 +62,10 @@ bool linearOrderOper(vector<vector<bool>> A);
 bool nonStrictLinearOrderOper(vector<vector<bool>> A);
 
 bool strictLinearOrderOper(vector<vector<bool>> A);
+
+vector <vector<bool>> getRelationByCondition(bool (*func)(int, int), int universalSize);
+
+void outputMatrix(const vector<vector<bool>>& matrix);
 
 
 #endif //DISCRETE_MATH_RELATION_H

@@ -12,6 +12,8 @@
 #include <fstream>
 #include <iostream>
 
+extern size_t numOfExecutions;
+
 vector<vector<bool>> getTransitiveClosureInj(vector<vector<bool>> &matrix);
 
 vector<vector<bool>> getTransitiveClosureByWarshellAlgorithmInj(vector<vector<bool>> &matrix);

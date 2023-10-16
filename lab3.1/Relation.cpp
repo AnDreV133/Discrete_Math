@@ -5,7 +5,7 @@
 
 #include "Relation.h"
 
-
+pair<int, int> failed;
 
 void updateBetween(vector<vector<bool>> A, vector<vector<bool>> B) {
     int maxX = max(A.size(), B.size());
@@ -176,7 +176,6 @@ bool antiReflexivityOper(vector<vector<bool>> A) {
         }
     }
     return true;
-    14
 }
 bool symmetryOper(vector<vector<bool>> A) {
     updateToSquare(A);
@@ -228,7 +227,6 @@ bool fullyOper(vector<vector<bool>> A) {
                 if (!(A[i][j] || A[j][i])) {
                     failed = {i + 1, j + 1};
                     return false;
-                    15
                 }
     return true;
 }
@@ -257,3 +255,20 @@ bool strictLinearOrderOper(vector<vector<bool>> A) {
     return strictOrderOper(A) && fullyOper(A);
 }
 
+vector <vector<bool>> getRelationByCondition(bool (*func)(int, int), int universalSize) {
+    vector <vector<bool>> res(universalSize, vector<bool>(universalSize));
+    for (int x = 1; x <= universalSize; ++x) {
+        for (int y = 1; y <= universalSize; ++y) {
+            res[x - 1][y - 1] = func(x, y);
+        }
+    }
+    return res;
+}
+
+void outputMatrix(const vector<vector<bool>>& matrix) {
+    for (const auto& ai: matrix) {
+        for (const auto& aij: ai)
+            cout << aij << ' ';
+        cout << '\n';
+    }
+}
