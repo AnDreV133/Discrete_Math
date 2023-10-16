@@ -105,9 +105,9 @@ size_t getFuncN2(size_t n) {
 }
 
 void
-gettingMinNMaxNumOfExecutionsOn1000ExperimentWithWriteToStream(ofstream &outpustStream, int powerOfSet, int amountPair,
+gettingMinNMaxNumOfExecutionsOn1000ExperimentWithWriteToStream(ofstream &outputStream, int powerOfSet, int amountPair,
                                                                vector<vector<bool>> (*operation)(
-                                                                       vector<vector<bool>> &), string name) {
+                                                                       vector<vector<bool>> &), const string& name) {
     size_t minNumOfExecutions = ULONG_LONG_MAX;
     size_t maxNumOfExecutions = 0;
     vector<vector<bool>> result;
@@ -121,7 +121,7 @@ gettingMinNMaxNumOfExecutionsOn1000ExperimentWithWriteToStream(ofstream &outpust
         maxNumOfExecutions = max(numOfExecutions, maxNumOfExecutions);
     }
 
-    outpustStream << "N = " << powerOfSet << "; "
+    outputStream << "N = " << powerOfSet << "; "
                   << "amount pair = " << amountPair << "; "
                   << "min k = " << minNumOfExecutions << "; "
                   << "max k = " << maxNumOfExecutions << " res: "

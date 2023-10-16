@@ -19,9 +19,9 @@ vector<vector<bool>> getTransitiveClosureByWarshellAlgorithmInj(vector<vector<bo
 vector<vector<bool>> generateRelationByRandom(int powerOfSet, int amountPair);
 
 void
-gettingMinNMaxNumOfExecutionsOn1000ExperimentWithWriteToStream(ofstream &outpustStream, int powerOfSet, int amountPair,
+gettingMinNMaxNumOfExecutionsOn1000ExperimentWithWriteToStream(ofstream &outputStream, int powerOfSet, int amountPair,
                                                                vector<vector<bool>> (*operation)(
-                                                                       vector<vector<bool>> &), string name);
+                                                                       vector<vector<bool>> &), const string& name);
 
 int main_test();
 
