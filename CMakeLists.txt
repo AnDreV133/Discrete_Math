@@ -17,8 +17,8 @@ add_library(
 
 add_library(
         SetFactor
-        lab3.3/Set_Factor.cpp
-        lab3.3/Set_Factor.h
+        lab3.3/SetFactor.cpp
+        lab3.3/SetFactor.h
 )
 
 add_executable(
