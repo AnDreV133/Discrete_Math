@@ -4,9 +4,7 @@
 
 #include "SetFactor.h"
 
-set<set<int>> getSetFactor(const vector<vector<bool>> &equalityRelation) {
-    set<set<int>> setFactor;
-
+vector<int> getSetFactorInArray(const vector<vector<bool>> &equalityRelation) {
     vector<int> subArrayForBuildSetFactor(equalityRelation.size());
     int counterSubSets = 0;
     for (int i = 0; i < equalityRelation.size(); ++i) {
@@ -20,12 +18,34 @@ set<set<int>> getSetFactor(const vector<vector<bool>> &equalityRelation) {
                 subArrayForBuildSetFactor[j] = counterSubSets;
         }
     }
+    return subArrayForBuildSetFactor;
+}
 
-    for (auto a: subArrayForBuildSetFactor)
-        cout << a << " ";
+set<set<int>> getSetFactorInSet(const vector<int> &subArrayForBuildSetFactor) {
+    set<set<int>> setFactor;
 
-    // todo разделить ф-ии, сделать вывод того и другого множества
+    bool hasInsert = false;
+    for (int numOfSubSet = 1; numOfSubSet <= subArrayForBuildSetFactor.size(); ++numOfSubSet) {
+        set<int> subSet;
+        for (int i = 0; i < subArrayForBuildSetFactor.size(); ++i) {
+            if (numOfSubSet == subArrayForBuildSetFactor[i]) {
+                subSet.insert(i + 1);
+                hasInsert = true;
+            }
+        }
+
+        if (!hasInsert)
+            break;
+
+        setFactor.insert(subSet);
+    }
 
     return setFactor;
+}
+
+set<set<int>> getSetFactorInSet(const vector<vector<bool>> &equalityRelation) {
+    vector<int> setFactor = getSetFactorInArray(equalityRelation);
+
+    return getSetFactorInSet(setFactor);
 }
 
