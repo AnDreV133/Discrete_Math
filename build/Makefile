@@ -156,6 +156,19 @@ SetFactor/fast:
 .PHONY : SetFactor/fast
 
 #=============================================================================
+# Target rules for targets named OrderedSet
+
+# Build rule for target.
+OrderedSet: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 OrderedSet
+.PHONY : OrderedSet
+
+# fast build rule for target.
+OrderedSet/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OrderedSet.dir/build.make CMakeFiles/OrderedSet.dir/build
+.PHONY : OrderedSet/fast
+
+#=============================================================================
 # Target rules for targets named Discrete_Math
 
 # Build rule for target.
@@ -240,6 +253,30 @@ lab3.3/SetFactor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SetFactor.dir/build.make CMakeFiles/SetFactor.dir/lab3.3/SetFactor.cpp.s
 .PHONY : lab3.3/SetFactor.cpp.s
 
+lab3.4/OrderedSet.obj: lab3.4/OrderedSet.cpp.obj
+.PHONY : lab3.4/OrderedSet.obj
+
+# target to build an object file
+lab3.4/OrderedSet.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OrderedSet.dir/build.make CMakeFiles/OrderedSet.dir/lab3.4/OrderedSet.cpp.obj
+.PHONY : lab3.4/OrderedSet.cpp.obj
+
+lab3.4/OrderedSet.i: lab3.4/OrderedSet.cpp.i
+.PHONY : lab3.4/OrderedSet.i
+
+# target to preprocess a source file
+lab3.4/OrderedSet.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OrderedSet.dir/build.make CMakeFiles/OrderedSet.dir/lab3.4/OrderedSet.cpp.i
+.PHONY : lab3.4/OrderedSet.cpp.i
+
+lab3.4/OrderedSet.s: lab3.4/OrderedSet.cpp.s
+.PHONY : lab3.4/OrderedSet.s
+
+# target to generate assembly for a file
+lab3.4/OrderedSet.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OrderedSet.dir/build.make CMakeFiles/OrderedSet.dir/lab3.4/OrderedSet.cpp.s
+.PHONY : lab3.4/OrderedSet.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -273,6 +310,7 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Discrete_Math"
+	@echo "... OrderedSet"
 	@echo "... Relation"
 	@echo "... SetFactor"
 	@echo "... TransitivityClosureExperiment"
@@ -285,6 +323,9 @@ help:
 	@echo "... lab3.3/SetFactor.obj"
 	@echo "... lab3.3/SetFactor.i"
 	@echo "... lab3.3/SetFactor.s"
+	@echo "... lab3.4/OrderedSet.obj"
+	@echo "... lab3.4/OrderedSet.i"
+	@echo "... lab3.4/OrderedSet.s"
 	@echo "... main.obj"
 	@echo "... main.i"
 	@echo "... main.s"

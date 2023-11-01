@@ -21,6 +21,12 @@ add_library(
         lab3.3/SetFactor.h
 )
 
+add_library(
+        OrderedSet
+        lab3.4/OrderedSet.cpp
+        lab3.4/OrderedSet.h
+)
+
 add_executable(
         Discrete_Math
         main.cpp
@@ -31,4 +37,5 @@ target_link_libraries(
         SetFactor
         TransitivityClosureExperiment
         Relation
+        OrderedSet
 )

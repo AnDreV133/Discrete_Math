@@ -3,3 +3,9 @@
 //
 
 #include "test.h"
+
+
+
+void test_lab_3_4(){
+
+}

@@ -66,6 +66,7 @@ CMAKE_BINARY_DIR = "T:/c github pc/Discrete_Math/build"
 all: CMakeFiles/Relation.dir/all
 all: CMakeFiles/TransitivityClosureExperiment.dir/all
 all: CMakeFiles/SetFactor.dir/all
+all: CMakeFiles/OrderedSet.dir/all
 all: CMakeFiles/Discrete_Math.dir/all
 .PHONY : all
 
@@ -77,6 +78,7 @@ preinstall:
 clean: CMakeFiles/Relation.dir/clean
 clean: CMakeFiles/TransitivityClosureExperiment.dir/clean
 clean: CMakeFiles/SetFactor.dir/clean
+clean: CMakeFiles/OrderedSet.dir/clean
 clean: CMakeFiles/Discrete_Math.dir/clean
 .PHONY : clean
 
@@ -87,7 +89,7 @@ clean: CMakeFiles/Discrete_Math.dir/clean
 CMakeFiles/Relation.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Relation.dir/build.make CMakeFiles/Relation.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Relation.dir/build.make CMakeFiles/Relation.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="T:/c github pc/Discrete_Math/build/CMakeFiles" --progress-num=3,4 "Built target Relation"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="T:/c github pc/Discrete_Math/build/CMakeFiles" --progress-num=5,6 "Built target Relation"
 .PHONY : CMakeFiles/Relation.dir/all
 
 # Build rule for subdir invocation for target.
@@ -113,7 +115,7 @@ CMakeFiles/Relation.dir/clean:
 CMakeFiles/TransitivityClosureExperiment.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TransitivityClosureExperiment.dir/build.make CMakeFiles/TransitivityClosureExperiment.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/TransitivityClosureExperiment.dir/build.make CMakeFiles/TransitivityClosureExperiment.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="T:/c github pc/Discrete_Math/build/CMakeFiles" --progress-num=7,8 "Built target TransitivityClosureExperiment"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="T:/c github pc/Discrete_Math/build/CMakeFiles" --progress-num=9,10 "Built target TransitivityClosureExperiment"
 .PHONY : CMakeFiles/TransitivityClosureExperiment.dir/all
 
 # Build rule for subdir invocation for target.
@@ -139,7 +141,7 @@ CMakeFiles/TransitivityClosureExperiment.dir/clean:
 CMakeFiles/SetFactor.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SetFactor.dir/build.make CMakeFiles/SetFactor.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/SetFactor.dir/build.make CMakeFiles/SetFactor.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="T:/c github pc/Discrete_Math/build/CMakeFiles" --progress-num=5,6 "Built target SetFactor"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="T:/c github pc/Discrete_Math/build/CMakeFiles" --progress-num=7,8 "Built target SetFactor"
 .PHONY : CMakeFiles/SetFactor.dir/all
 
 # Build rule for subdir invocation for target.
@@ -159,12 +161,39 @@ CMakeFiles/SetFactor.dir/clean:
 .PHONY : CMakeFiles/SetFactor.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/OrderedSet.dir
+
+# All Build rule for target.
+CMakeFiles/OrderedSet.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OrderedSet.dir/build.make CMakeFiles/OrderedSet.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OrderedSet.dir/build.make CMakeFiles/OrderedSet.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="T:/c github pc/Discrete_Math/build/CMakeFiles" --progress-num=3,4 "Built target OrderedSet"
+.PHONY : CMakeFiles/OrderedSet.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/OrderedSet.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start "T:/c github pc/Discrete_Math/build/CMakeFiles" 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/OrderedSet.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start "T:/c github pc/Discrete_Math/build/CMakeFiles" 0
+.PHONY : CMakeFiles/OrderedSet.dir/rule
+
+# Convenience name for target.
+OrderedSet: CMakeFiles/OrderedSet.dir/rule
+.PHONY : OrderedSet
+
+# clean rule for target.
+CMakeFiles/OrderedSet.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/OrderedSet.dir/build.make CMakeFiles/OrderedSet.dir/clean
+.PHONY : CMakeFiles/OrderedSet.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/Discrete_Math.dir
 
 # All Build rule for target.
 CMakeFiles/Discrete_Math.dir/all: CMakeFiles/Relation.dir/all
 CMakeFiles/Discrete_Math.dir/all: CMakeFiles/TransitivityClosureExperiment.dir/all
 CMakeFiles/Discrete_Math.dir/all: CMakeFiles/SetFactor.dir/all
+CMakeFiles/Discrete_Math.dir/all: CMakeFiles/OrderedSet.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Discrete_Math.dir/build.make CMakeFiles/Discrete_Math.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Discrete_Math.dir/build.make CMakeFiles/Discrete_Math.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="T:/c github pc/Discrete_Math/build/CMakeFiles" --progress-num=1,2 "Built target Discrete_Math"
@@ -172,7 +201,7 @@ CMakeFiles/Discrete_Math.dir/all: CMakeFiles/SetFactor.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Discrete_Math.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "T:/c github pc/Discrete_Math/build/CMakeFiles" 8
+	$(CMAKE_COMMAND) -E cmake_progress_start "T:/c github pc/Discrete_Math/build/CMakeFiles" 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Discrete_Math.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "T:/c github pc/Discrete_Math/build/CMakeFiles" 0
 .PHONY : CMakeFiles/Discrete_Math.dir/rule
