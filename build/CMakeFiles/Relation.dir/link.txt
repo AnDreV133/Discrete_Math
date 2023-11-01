@@ -1,0 +1,2 @@
+C:/Users/dmitr/gcc/bin/ar.exe qc libRelation.a CMakeFiles/Relation.dir/lab3.1/Relation.cpp.obj
+C:/Users/dmitr/gcc/bin/ranlib.exe libRelation.a

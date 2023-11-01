@@ -28,7 +28,7 @@ add_executable(
 
 target_link_libraries(
         Discrete_Math
-        Relation
-        TransitivityClosureExperiment
         SetFactor
+        TransitivityClosureExperiment
+        Relation
 )

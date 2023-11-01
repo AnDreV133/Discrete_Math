@@ -4,6 +4,7 @@
 
 #include "TransitivityClosureExperiment.h"
 
+
 size_t numOfExecutions = 0;
 
 vector<vector<bool>> unionOperInj(vector<vector<bool>> A, vector<vector<bool>> B) {
@@ -64,7 +65,7 @@ vector<vector<bool>> getTransitiveClosureByWarshellAlgorithmInj(vector<vector<bo
     return result;
 }
 
-vector<vector<bool>> generateRelationByRandom(int powerOfSet, int amountPair) {
+vector<vector<bool>> getRandomRelation(int powerOfSet, int amountPair) {
     if (amountPair > pow(2, powerOfSet)) {
         cerr << "amount pair bigger than power of set";
         return {};
@@ -113,7 +114,7 @@ gettingMinNMaxNumOfExecutionsOn1000ExperimentWithWriteToStream(ofstream &outputS
     vector<vector<bool>> result;
     for (int i = 0; i < 1000; ++i) {
         vector<vector<bool>> generatedRelation
-                = generateRelationByRandom(powerOfSet, amountPair);
+                = getRandomRelation(powerOfSet, amountPair);
 
         result = operation(generatedRelation);
 

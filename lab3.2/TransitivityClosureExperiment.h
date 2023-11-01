@@ -18,7 +18,7 @@ vector<vector<bool>> getTransitiveClosureInj(vector<vector<bool>> &matrix);
 
 vector<vector<bool>> getTransitiveClosureByWarshellAlgorithmInj(vector<vector<bool>> &matrix);
 
-vector<vector<bool>> generateRelationByRandom(int powerOfSet, int amountPair);
+vector<vector<bool>> getRandomRelation(int powerOfSet, int amountPair);
 
 void
 gettingMinNMaxNumOfExecutionsOn1000ExperimentWithWriteToStream(ofstream &outputStream, int powerOfSet, int amountPair,

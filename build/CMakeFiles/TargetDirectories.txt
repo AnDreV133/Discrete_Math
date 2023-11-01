@@ -1,0 +1,6 @@
+T:/c github pc/Discrete_Math/build/CMakeFiles/Relation.dir
+T:/c github pc/Discrete_Math/build/CMakeFiles/TransitivityClosureExperiment.dir
+T:/c github pc/Discrete_Math/build/CMakeFiles/SetFactor.dir
+T:/c github pc/Discrete_Math/build/CMakeFiles/Discrete_Math.dir
+T:/c github pc/Discrete_Math/build/CMakeFiles/edit_cache.dir
+T:/c github pc/Discrete_Math/build/CMakeFiles/rebuild_cache.dir

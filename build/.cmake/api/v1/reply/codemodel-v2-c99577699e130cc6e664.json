@@ -1,0 +1,87 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.24"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Discrete_Math",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Discrete_Math::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Discrete_Math-Debug-ebb0a4323a54e3f5dd2b.json",
+					"name" : "Discrete_Math",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Relation::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Relation-Debug-1f91c0f651272be35b74.json",
+					"name" : "Relation",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "SetFactor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-SetFactor-Debug-b3cc599c2e42aad227ed.json",
+					"name" : "SetFactor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "TransitivityClosureExperiment::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-TransitivityClosureExperiment-Debug-6f87e8b2aff8e7c1bd0a.json",
+					"name" : "TransitivityClosureExperiment",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "T:/c github pc/Discrete_Math/build",
+		"source" : "T:/c github pc/Discrete_Math"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

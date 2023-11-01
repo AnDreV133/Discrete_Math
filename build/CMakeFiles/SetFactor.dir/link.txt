@@ -1,0 +1,2 @@
+C:/Users/dmitr/gcc/bin/ar.exe qc libSetFactor.a CMakeFiles/SetFactor.dir/lab3.3/SetFactor.cpp.obj
+C:/Users/dmitr/gcc/bin/ranlib.exe libSetFactor.a
