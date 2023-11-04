@@ -264,11 +264,3 @@ vector <vector<bool>> getRelationByCondition(bool (*func)(int, int), int univers
     }
     return res;
 }
-
-void outputMatrix(const vector<vector<bool>>& matrix) {
-    for (const auto& ai: matrix) {
-        for (const auto& aij: ai)
-            cout << aij << ' ';
-        cout << '\n';
-    }
-}
