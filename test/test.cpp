@@ -45,4 +45,16 @@ void run_lab_3_4()
 
         cout << '\n';
     }
+
+    map<int, pair<int, int>> mapOfdot = getMapOfDot(M2);
+    vector<vector<bool>> relationMatrix = getRelationByConditionByDotSet(predicate, M2, mapOfdot);
+
+    for (auto ai : relationMatrix)
+    {
+        for (auto aij : ai)
+            cout << aij << " ";
+
+        cout << '\n';
+    }
+
 }
