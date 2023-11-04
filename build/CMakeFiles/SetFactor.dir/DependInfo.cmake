@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "T:/c github pc/Discrete_Math/lab3.3/SetFactor.cpp" "CMakeFiles/SetFactor.dir/lab3.3/SetFactor.cpp.obj" "gcc" "CMakeFiles/SetFactor.dir/lab3.3/SetFactor.cpp.obj.d"
+  "D:/Repositories/Discrete_Math/lab3.3/SetFactor.cpp" "CMakeFiles/SetFactor.dir/lab3.3/SetFactor.cpp.obj" "gcc" "CMakeFiles/SetFactor.dir/lab3.3/SetFactor.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

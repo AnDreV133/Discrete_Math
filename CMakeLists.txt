@@ -27,6 +27,12 @@ add_library(
         lab3.4/OrderedSet.h
 )
 
+add_library(
+        test
+        test/test.cpp
+        test/test.h
+)
+
 add_executable(
         Discrete_Math
         main.cpp
@@ -37,5 +43,7 @@ target_link_libraries(
         SetFactor
         TransitivityClosureExperiment
         Relation
+        test
         OrderedSet
+        
 )

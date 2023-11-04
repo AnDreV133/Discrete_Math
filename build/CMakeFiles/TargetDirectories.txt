@@ -1,7 +1,8 @@
-T:/c github pc/Discrete_Math/build/CMakeFiles/Relation.dir
-T:/c github pc/Discrete_Math/build/CMakeFiles/TransitivityClosureExperiment.dir
-T:/c github pc/Discrete_Math/build/CMakeFiles/SetFactor.dir
-T:/c github pc/Discrete_Math/build/CMakeFiles/OrderedSet.dir
-T:/c github pc/Discrete_Math/build/CMakeFiles/Discrete_Math.dir
-T:/c github pc/Discrete_Math/build/CMakeFiles/edit_cache.dir
-T:/c github pc/Discrete_Math/build/CMakeFiles/rebuild_cache.dir
+D:/Repositories/Discrete_Math/build/CMakeFiles/Relation.dir
+D:/Repositories/Discrete_Math/build/CMakeFiles/TransitivityClosureExperiment.dir
+D:/Repositories/Discrete_Math/build/CMakeFiles/SetFactor.dir
+D:/Repositories/Discrete_Math/build/CMakeFiles/OrderedSet.dir
+D:/Repositories/Discrete_Math/build/CMakeFiles/test.dir
+D:/Repositories/Discrete_Math/build/CMakeFiles/Discrete_Math.dir
+D:/Repositories/Discrete_Math/build/CMakeFiles/edit_cache.dir
+D:/Repositories/Discrete_Math/build/CMakeFiles/rebuild_cache.dir

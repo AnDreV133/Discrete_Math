@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "T:/c github pc/Discrete_Math/lab3.1/Relation.cpp" "CMakeFiles/Relation.dir/lab3.1/Relation.cpp.obj" "gcc" "CMakeFiles/Relation.dir/lab3.1/Relation.cpp.obj.d"
+  "D:/Repositories/Discrete_Math/lab3.1/Relation.cpp" "CMakeFiles/Relation.dir/lab3.1/Relation.cpp.obj" "gcc" "CMakeFiles/Relation.dir/lab3.1/Relation.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

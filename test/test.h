@@ -5,10 +5,6 @@
 #ifndef DISCRETE_MATH_TEST_H
 #define DISCRETE_MATH_TEST_H
 
-
-class test {
-
-};
-
+void run_lab_3_4();
 
 #endif //DISCRETE_MATH_TEST_H

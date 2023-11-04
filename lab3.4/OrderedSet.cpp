@@ -1,13 +1,30 @@
 #include "OrderedSet.h"
 
-#include <utility>
+map<int, pair<int, int>> getMapOfDot(vector<pair<int, int>> dotSet)
+{
+    map<int, pair<int, int>> res;
+    for (int i = 0; i < dotSet.size(); i++)
+    {
+        res.insert({i, dotSet[i]});
+    }
 
-vector<pair<int, int>> getPairByConditionByDotSet(bool (*condition)(pair<int, int>, pair<int, int>), vector<pair<int, int>> dotSet) {
-    vector<pair<int, int>> res;
-    for (auto& dot1: dotSet) {
-    for (auto& dot2: dotSet) {
-        if(condition(dot1, dot2)) {
-            res.push_back() // todo 
+    return res;
+}
+
+vector<vector<bool>> getRelationByConditionByDotSet(
+    bool (*condition)(pair<int, int>, pair<int, int>),
+    vector<pair<int, int>> dotSet, map<int, pair<int, int>> mapOfDot)
+{
+    vector<vector<bool>> res;
+    for (size_t i = 0; i < dotSet.size(); i++)
+    {
+        vector<bool> buf(dotSet.size());
+        for (size_t j = 0; j < dotSet.size(); j++)
+        {
+            buf[j] = condition(mapOfDot[i], mapOfDot[j]);
         }
-    } 
+        res.push_back(buf);
+    }
+
+    return res;
 }
