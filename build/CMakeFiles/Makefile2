@@ -217,11 +217,11 @@ CMakeFiles/test.dir/clean:
 # Target rules for target CMakeFiles/Discrete_Math.dir
 
 # All Build rule for target.
-CMakeFiles/Discrete_Math.dir/all: CMakeFiles/Relation.dir/all
-CMakeFiles/Discrete_Math.dir/all: CMakeFiles/TransitivityClosureExperiment.dir/all
-CMakeFiles/Discrete_Math.dir/all: CMakeFiles/SetFactor.dir/all
 CMakeFiles/Discrete_Math.dir/all: CMakeFiles/OrderedSet.dir/all
 CMakeFiles/Discrete_Math.dir/all: CMakeFiles/test.dir/all
+CMakeFiles/Discrete_Math.dir/all: CMakeFiles/TransitivityClosureExperiment.dir/all
+CMakeFiles/Discrete_Math.dir/all: CMakeFiles/SetFactor.dir/all
+CMakeFiles/Discrete_Math.dir/all: CMakeFiles/Relation.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Discrete_Math.dir\build.make CMakeFiles/Discrete_Math.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Discrete_Math.dir\build.make CMakeFiles/Discrete_Math.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\Repositories\Discrete_Math\build\CMakeFiles --progress-num=1,2 "Built target Discrete_Math"
