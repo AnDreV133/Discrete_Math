@@ -65,7 +65,4 @@ bool strictLinearOrderOper(vector<vector<bool>> A);
 
 vector <vector<bool>> getRelationByCondition(bool (*func)(int, int), int universalSize);
 
-void outputMatrix(const vector<vector<bool>>& matrix);
-
-
 #endif //DISCRETE_MATH_RELATION_H

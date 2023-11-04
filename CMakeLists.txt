@@ -21,6 +21,12 @@ add_library(
         lab3.3/SetFactor.h
 )
 
+add_library(
+        alg
+        alg/alg.cpp
+        alg/alg.h
+)
+
 add_executable(
         Discrete_Math
         main.cpp
@@ -30,5 +36,6 @@ target_link_libraries(
         Discrete_Math
         SetFactor
         TransitivityClosureExperiment
+        alg
         Relation
 )

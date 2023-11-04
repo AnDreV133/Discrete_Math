@@ -65,6 +65,7 @@ CMAKE_BINARY_DIR = D:\Repositories\Discrete_Math\build
 all: CMakeFiles/Relation.dir/all
 all: CMakeFiles/TransitivityClosureExperiment.dir/all
 all: CMakeFiles/SetFactor.dir/all
+all: CMakeFiles/alg.dir/all
 all: CMakeFiles/Discrete_Math.dir/all
 .PHONY : all
 
@@ -76,6 +77,7 @@ preinstall:
 clean: CMakeFiles/Relation.dir/clean
 clean: CMakeFiles/TransitivityClosureExperiment.dir/clean
 clean: CMakeFiles/SetFactor.dir/clean
+clean: CMakeFiles/alg.dir/clean
 clean: CMakeFiles/Discrete_Math.dir/clean
 .PHONY : clean
 
@@ -158,12 +160,39 @@ CMakeFiles/SetFactor.dir/clean:
 .PHONY : CMakeFiles/SetFactor.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/alg.dir
+
+# All Build rule for target.
+CMakeFiles/alg.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\alg.dir\build.make CMakeFiles/alg.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\alg.dir\build.make CMakeFiles/alg.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\Repositories\Discrete_Math\build\CMakeFiles --progress-num=9,10 "Built target alg"
+.PHONY : CMakeFiles/alg.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/alg.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Repositories\Discrete_Math\build\CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/alg.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Repositories\Discrete_Math\build\CMakeFiles 0
+.PHONY : CMakeFiles/alg.dir/rule
+
+# Convenience name for target.
+alg: CMakeFiles/alg.dir/rule
+.PHONY : alg
+
+# clean rule for target.
+CMakeFiles/alg.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\alg.dir\build.make CMakeFiles/alg.dir/clean
+.PHONY : CMakeFiles/alg.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/Discrete_Math.dir
 
 # All Build rule for target.
+CMakeFiles/Discrete_Math.dir/all: CMakeFiles/Relation.dir/all
 CMakeFiles/Discrete_Math.dir/all: CMakeFiles/TransitivityClosureExperiment.dir/all
 CMakeFiles/Discrete_Math.dir/all: CMakeFiles/SetFactor.dir/all
-CMakeFiles/Discrete_Math.dir/all: CMakeFiles/Relation.dir/all
+CMakeFiles/Discrete_Math.dir/all: CMakeFiles/alg.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Discrete_Math.dir\build.make CMakeFiles/Discrete_Math.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Discrete_Math.dir\build.make CMakeFiles/Discrete_Math.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=D:\Repositories\Discrete_Math\build\CMakeFiles --progress-num=1,2 "Built target Discrete_Math"
@@ -171,7 +200,7 @@ CMakeFiles/Discrete_Math.dir/all: CMakeFiles/Relation.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Discrete_Math.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start D:\Repositories\Discrete_Math\build\CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start D:\Repositories\Discrete_Math\build\CMakeFiles 10
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/Discrete_Math.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start D:\Repositories\Discrete_Math\build\CMakeFiles 0
 .PHONY : CMakeFiles/Discrete_Math.dir/rule

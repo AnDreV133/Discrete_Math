@@ -93,6 +93,7 @@ Discrete_Math.exe: CMakeFiles/Discrete_Math.dir/main.cpp.obj
 Discrete_Math.exe: CMakeFiles/Discrete_Math.dir/build.make
 Discrete_Math.exe: libSetFactor.a
 Discrete_Math.exe: libTransitivityClosureExperiment.a
+Discrete_Math.exe: libalg.a
 Discrete_Math.exe: libRelation.a
 Discrete_Math.exe: CMakeFiles/Discrete_Math.dir/linkLibs.rsp
 Discrete_Math.exe: CMakeFiles/Discrete_Math.dir/objects1.rsp

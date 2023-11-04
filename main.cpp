@@ -1,5 +1,6 @@
 #include <iostream>
 #include "lab3.2/TransitivityClosureExperiment.h"
+#include "alg/alg.h"
 
 int main() {
     vector<vector<bool>> relation = getRandomRelation(5, 25);
