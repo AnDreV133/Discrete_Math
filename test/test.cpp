@@ -7,6 +7,7 @@
 #include <utility>
 #include <iostream>
 #include "../lab3.4/OrderedSet.h"
+#include "../alg/alg.h"
 
 using namespace std;
 
@@ -35,26 +36,13 @@ bool predicate(pair<int, int> a, pair<int, int> b)
 
 void run_lab_3_4()
 {
-    map<int, pair<int, int>> mapOfdot = getMapOfDot(M1);
-    vector<vector<bool>> relationMatrix = getRelationByConditionByDotSet(predicate, M1, mapOfdot);
+    map<int, pair<int, int>> mapOfdot1 = getMapOfDot(M1);
+    vector<vector<bool>> relationMatrix1 = getRelationByConditionByDotSet(predicate, M1, mapOfdot1);
 
-    for (auto ai : relationMatrix)
-    {
-        for (auto aij : ai)
-            cout << aij << " ";
+    outputMatrix(relationMatrix1);
 
-        cout << '\n';
-    }
+    map<int, pair<int, int>> mapOfdot2 = getMapOfDot(M2);
+    vector<vector<bool>> relationMatrix2 = getRelationByConditionByDotSet(predicate, M2, mapOfdot2);
 
-    map<int, pair<int, int>> mapOfdot = getMapOfDot(M2);
-    vector<vector<bool>> relationMatrix = getRelationByConditionByDotSet(predicate, M2, mapOfdot);
-
-    for (auto ai : relationMatrix)
-    {
-        for (auto aij : ai)
-            cout << aij << " ";
-
-        cout << '\n';
-    }
-
+    outputMatrix(relationMatrix2);
 }
