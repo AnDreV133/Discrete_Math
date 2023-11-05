@@ -4,6 +4,12 @@ project(Discrete_Math)
 set(CMAKE_CXX_STANDARD 17)
 
 add_library(
+        alg
+        alg/alg.cpp
+        alg/alg.h
+)
+
+add_library(
         Relation
         lab3.1/Relation.cpp
         lab3.1/Relation.h
@@ -20,6 +26,7 @@ add_library(
         lab3.3/SetFactor.cpp
         lab3.3/SetFactor.h
 )
+
 
 add_library(
         OrderedSet
@@ -40,11 +47,10 @@ add_executable(
 
 target_link_libraries(
         Discrete_Math
+        test
         alg
         Relation
         TransitivityClosureExperiment
         SetFactor
         OrderedSet
-        test
-        
 )

@@ -116,6 +116,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named alg
+
+# Build rule for target.
+alg: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 alg
+.PHONY : alg
+
+# fast build rule for target.
+alg/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\alg.dir\build.make CMakeFiles/alg.dir/build
+.PHONY : alg/fast
+
+#=============================================================================
 # Target rules for targets named Relation
 
 # Build rule for target.
@@ -192,6 +205,30 @@ Discrete_Math: cmake_check_build_system
 Discrete_Math/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Discrete_Math.dir\build.make CMakeFiles/Discrete_Math.dir/build
 .PHONY : Discrete_Math/fast
+
+alg/alg.obj: alg/alg.cpp.obj
+.PHONY : alg/alg.obj
+
+# target to build an object file
+alg/alg.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\alg.dir\build.make CMakeFiles/alg.dir/alg/alg.cpp.obj
+.PHONY : alg/alg.cpp.obj
+
+alg/alg.i: alg/alg.cpp.i
+.PHONY : alg/alg.i
+
+# target to preprocess a source file
+alg/alg.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\alg.dir\build.make CMakeFiles/alg.dir/alg/alg.cpp.i
+.PHONY : alg/alg.cpp.i
+
+alg/alg.s: alg/alg.cpp.s
+.PHONY : alg/alg.s
+
+# target to generate assembly for a file
+alg/alg.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\alg.dir\build.make CMakeFiles/alg.dir/alg/alg.cpp.s
+.PHONY : alg/alg.cpp.s
 
 lab3.1/Relation.obj: lab3.1/Relation.cpp.obj
 .PHONY : lab3.1/Relation.obj
@@ -350,7 +387,11 @@ help:
 	@echo ... Relation
 	@echo ... SetFactor
 	@echo ... TransitivityClosureExperiment
+	@echo ... alg
 	@echo ... test
+	@echo ... alg/alg.obj
+	@echo ... alg/alg.i
+	@echo ... alg/alg.s
 	@echo ... lab3.1/Relation.obj
 	@echo ... lab3.1/Relation.i
 	@echo ... lab3.1/Relation.s

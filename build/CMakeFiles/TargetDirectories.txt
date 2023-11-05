@@ -1,3 +1,4 @@
+D:/Repositories/Discrete_Math/build/CMakeFiles/alg.dir
 D:/Repositories/Discrete_Math/build/CMakeFiles/Relation.dir
 D:/Repositories/Discrete_Math/build/CMakeFiles/TransitivityClosureExperiment.dir
 D:/Repositories/Discrete_Math/build/CMakeFiles/SetFactor.dir
