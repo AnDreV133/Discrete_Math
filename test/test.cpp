@@ -3,13 +3,6 @@
 //
 
 #include "test.h"
-#include <vector>
-#include <utility>
-#include <iostream>
-#include "../lab3.4/OrderedSet.h"
-#include "../alg/alg.h"
-
-using namespace std;
 
 vector<pair<int, int>> M1 = {
     {-1, 1}, {0, 1}, {1, 1}, {-1, 0}, {0, 0}, {1, 0}, {-1, -1}, {0, -1}, {1, -1}};
@@ -45,4 +38,20 @@ void run_lab_3_4()
     vector<vector<bool>> relationMatrix2 = getRelationByConditionByDotSet(predicate, M2, mapOfdot2);
 
     outputMatrix(relationMatrix2);
+
+    vector<vector<bool>> testMatrixOrder = {
+        {1, 1, 1, 1, 1, 1, 1, 1},
+        {0, 1, 0, 0, 1, 1, 0, 1},
+        {0, 0, 1, 0, 1, 0, 1, 1},
+        {0, 0, 0, 1, 0, 1, 1, 1},
+        {0, 0, 0, 0, 1, 0, 0, 1},
+        {0, 0, 0, 0, 0, 1, 0, 1},
+        {0, 0, 0, 0, 0, 0, 1, 1},
+        {0, 0, 0, 0, 0, 0, 0, 1}
+    };
+
+    vector<vector<bool>> testMatrixDominance = getDominanceFromStrictOrder(testMatrixOrder);
+
+    outputMatrix(testMatrixDominance);
+
 }

@@ -13,5 +13,7 @@ map<int, pair<int, int>> getMapOfDot(vector<pair<int, int>> dotSet);
 vector<vector<bool>> getRelationByConditionByDotSet(
     bool (*condition)(pair<int, int>, pair<int, int>),
     vector<pair<int, int>> dotSet, map<int, pair<int, int>> mapOfDot);
+vector<vector<bool>> getDominanceFromStrictOrder(vector<vector<bool>> matrix);
+vector<vector<int>> getTopologicalSort(vector<vector<bool>> matrix);
 
 #endif // DISCRETE_MATH_ORDEREDSET_H

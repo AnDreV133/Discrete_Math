@@ -40,10 +40,11 @@ add_executable(
 
 target_link_libraries(
         Discrete_Math
-        SetFactor
-        TransitivityClosureExperiment
+        alg
         Relation
-        test
+        TransitivityClosureExperiment
+        SetFactor
         OrderedSet
+        test
         
 )
