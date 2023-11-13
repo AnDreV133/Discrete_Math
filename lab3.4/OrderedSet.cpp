@@ -29,9 +29,13 @@ vector<vector<bool>> getRelationByConditionByDotSet(
     return res;
 }
 
-vector<vector<bool>> getDominanceFromStrictOrder(vector<vector<bool>> matrix)
+vector<vector<bool>> getDominanceFromOrder(vector<vector<bool>> matrix)
 {
     vector<vector<bool>> res = matrix;
+
+    for (size_t i = 0; i < res.size(); i++)
+        res[i][i] = 0;
+
     for (size_t x = 0; x < res.size(); x++)
     {
         for (size_t y = 0; y < res.size(); y++)
@@ -52,30 +56,6 @@ vector<vector<bool>> getDominanceFromStrictOrder(vector<vector<bool>> matrix)
 
     return res;
 }
-
-// vector<int> getElemByX(vector<vector<bool>> matrix, int x)
-// {
-//     vector<int> res;
-//     for (size_t iy = 0; iy < matrix.size(); iy++)
-//     {
-//         if (matrix[x][iy])
-//             res.push_back(iy);
-//     }
-
-//     return res;
-// }
-
-// vector<int> getElemByY(vector<vector<bool>> matrix, int y)
-// {
-//     vector<int> res;
-//     for (size_t ix = 0; ix < matrix.size(); ix++)
-//     {
-//         if (matrix[ix][y])
-//             res.push_back(ix);
-//     }
-
-//     return res;
-// }
 
 bool areElemsNegative(vector<int> arr)
 {
@@ -108,18 +88,44 @@ vector<vector<int>> getTopologicalSort(vector<vector<bool>> matrix)
         for (size_t layer = 1; layer <= sumArr.size(); layer++)
         {
             vector<int> buf;
+            int equalElem = -1;
             for (size_t i = 0; i < sumArr.size(); i++)
             {
                 if (sumArr[i] == 0)
-                    buf.push_back(i);
+                {
+                    int x = 0;
+                    while (x < matrix.size() && equalElem < 0)
+                    {
+                        if (matrix[x][i] == 1)
+                        {
+                            equalElem = x;
+                            break;
+                        }
+
+                        x++;
+                    }
+                    x = 0;
+                    while (x < matrix.size())
+                    {
+                        if (matrix[x][i] && x == equalElem || equalElem < 0)
+                        {
+                            buf.push_back(i);
+                            sumArr[i] = -1;
+                            break;
+                        }
+
+                        x++;
+                    } // todo не выводятся некоторые элементы
+                }
             }
-            res.push_back(buf);
+
+            if (!buf.empty())
+                res.push_back(buf);
 
             for (size_t i = 0; i < sumArr.size(); i++)
             {
-                if (sumArr[i] == 0)
-                    sumArr[i] = -1;
-                else if (sumArr[i] == layer)
+
+                if (sumArr[i] == layer)
                     sumArr[i] = 0;
             }
         }
@@ -134,4 +140,16 @@ vector<vector<int>> getTopologicalSort(vector<vector<bool>> matrix)
     }
 
     return res;
+}
+
+void outputResultByDots(vector<vector<int>> knotsByLevels, map<int, pair<int, int>> mapOfDot)
+{
+    for (auto level : knotsByLevels)
+    {
+        for (auto knot : level)
+        {
+            cout << "(" << mapOfDot[knot].first << "," << mapOfDot[knot].second << ") ";
+        }
+        cout << "\n";
+    }
 }
