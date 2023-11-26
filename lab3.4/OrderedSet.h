@@ -23,5 +23,4 @@ vector<vector<int>> getTopologicalSort(vector<vector<bool>> matrix);
 
 void outputResultByDots(vector<vector<int>> knotsByLevels, map<int, pair<int, int>> mapOfDot);
 
-
 #endif // DISCRETE_MATH_ORDEREDSET_H

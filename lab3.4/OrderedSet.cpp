@@ -1,4 +1,5 @@
 #include "OrderedSet.h"
+#include <algorithm>
 
 map<int, pair<int, int>> getMapOfDot(vector<pair<int, int>> dotSet)
 {
@@ -68,80 +69,6 @@ bool areElemsNegative(vector<int> arr)
     return true;
 }
 
-vector<vector<int>> getTopologicalSort(vector<vector<bool>> matrix)
-{
-    vector<int> sumArr;
-    for (size_t y = 0; y < matrix.size(); y++)
-    {
-        int count = 0;
-        for (size_t x = 0; x < matrix.size(); x++)
-        {
-            if (matrix[x][y])
-                count++;
-        }
-        sumArr.push_back(count);
-    }
-
-    vector<vector<int>> res;
-    while (true)
-    {
-        for (size_t layer = 1; layer <= sumArr.size(); layer++)
-        {
-            vector<int> buf;
-            int equalElem = -1;
-            for (size_t i = 0; i < sumArr.size(); i++)
-            {
-                if (sumArr[i] == 0)
-                {
-                    int x = 0;
-                    while (x < matrix.size() && equalElem < 0)
-                    {
-                        if (matrix[x][i] == 1)
-                        {
-                            equalElem = x;
-                            break;
-                        }
-
-                        x++;
-                    }
-                    x = 0;
-                    while (x < matrix.size())
-                    {
-                        if (matrix[x][i] && x == equalElem || equalElem < 0)
-                        {
-                            buf.push_back(i);
-                            sumArr[i] = -1;
-                            break;
-                        }
-
-                        x++;
-                    } // todo не выводятся некоторые элементы
-                }
-            }
-
-            if (!buf.empty())
-                res.push_back(buf);
-
-            for (size_t i = 0; i < sumArr.size(); i++)
-            {
-
-                if (sumArr[i] == layer)
-                    sumArr[i] = 0;
-            }
-        }
-
-        if (areElemsNegative(sumArr))
-            break;
-
-        for (size_t i = 0; i < sumArr.size(); i++)
-        {
-            sumArr[i]--;
-        }
-    }
-
-    return res;
-}
-
 void outputResultByDots(vector<vector<int>> knotsByLevels, map<int, pair<int, int>> mapOfDot)
 {
     for (auto level : knotsByLevels)
@@ -149,7 +76,70 @@ void outputResultByDots(vector<vector<int>> knotsByLevels, map<int, pair<int, in
         for (auto knot : level)
         {
             cout << "(" << mapOfDot[knot].first << "," << mapOfDot[knot].second << ") ";
+            // cout << knot;
         }
         cout << "\n";
     }
+}
+
+vector<vector<int>> getTopologicalSort(vector<vector<bool>> matrix)
+{
+    std::vector<int> sumArr(matrix.size(), 0);
+
+    for (int x = 0; x < matrix.size(); x++)
+    {
+        for (int y = 0; y < matrix.size(); y++)
+        {
+            sumArr[y] += matrix[x][y];
+        }
+    }
+
+    int deepOfDiagram = 0;
+
+    while (true)
+    {
+        std::vector<int> indicesOnZeroElems;
+
+        // Поиск нулевых элементов и сохранение их индексов
+        for (size_t i = 0; i < sumArr.size(); i++)
+            {
+                if (sumArr[i] == 0)
+                    indicesOnZeroElems.push_back(i);
+            }
+
+        if (indicesOnZeroElems.empty())
+            break;
+
+        deepOfDiagram--;
+        for (auto indexOnZeroElem : indicesOnZeroElems)
+        {
+            // Заменяем нулевой элемент
+            sumArr[indexOnZeroElem] = deepOfDiagram;
+
+            for (int i = 0; i < matrix[indexOnZeroElem].size(); i++)
+            {
+                bool element = matrix[indexOnZeroElem][i];
+                sumArr[i] -= element;
+            }
+        }
+    }
+
+    std::vector<std::vector<int>> levels;
+    for (int i = 0; i < matrix.size(); i++)
+    {
+        std::vector<int> level;
+
+        for (int j = 0; j < matrix.size(); j++)
+        {
+            if (sumArr[j] == -(1 + i))
+                level.push_back(j);
+        }
+
+        if (level.empty())
+            break;
+
+        levels.push_back(level);
+    }
+
+    return levels;
 }

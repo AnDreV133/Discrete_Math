@@ -45,16 +45,16 @@ bool predicate(pair<int, int> a, pair<int, int> b)
 void run_lab_3_4()
 {
     map<int, pair<int, int>> mapOfDot1 = getMapOfDot(M1);
-    for (size_t i = 0; i < mapOfDot1.size(); i++)
-        cout << i << "-(" << mapOfDot1[i].first << "," << mapOfDot1[i].second << ")\n";
-    cout << '\n';
+    // for (size_t i = 0; i < mapOfDot1.size(); i++)
+        // cout << i << "-(" << mapOfDot1[i].first << "," << mapOfDot1[i].second << ")\n";
+    // cout << '\n';
 
     vector<vector<bool>> relationMatrix1 = getRelationByConditionByDotSet(predicate, M1, mapOfDot1);
     // outputMatrixBool(relationMatrix1);
 
     relationMatrix1 = getDominanceFromOrder(relationMatrix1);
-    outputMatrixBool(relationMatrix1);
-    cout << '\n';
+    // outputMatrixBool(relationMatrix1);
+    // cout << '\n';
 
     vector<vector<int>> sortedPoints1 = getTopologicalSort(relationMatrix1);
     outputResultByDots(sortedPoints1, mapOfDot1);
