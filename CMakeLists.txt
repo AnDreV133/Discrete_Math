@@ -35,6 +35,12 @@ add_library(
 )
 
 add_library(
+        Graph
+        lab4.1/Graph.cpp
+        lab4.1/Graph.h
+)
+
+add_library(
         test
         test/test.cpp
         test/test.h
@@ -53,4 +59,5 @@ target_link_libraries(
         TransitivityClosureExperiment
         SetFactor
         OrderedSet
+        Graph
 )
