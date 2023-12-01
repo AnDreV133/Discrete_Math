@@ -1,6 +1,12 @@
 [
 {
   "directory": "D:/Repositories/Discrete_Math/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe   -g -o CMakeFiles\\alg.dir\\alg\\alg.cpp.obj -c D:\\Repositories\\Discrete_Math\\alg\\alg.cpp",
+  "file": "D:/Repositories/Discrete_Math/alg/alg.cpp",
+  "output": "CMakeFiles/alg.dir/alg/alg.cpp.obj"
+},
+{
+  "directory": "D:/Repositories/Discrete_Math/build",
   "command": "C:\\msys64\\ucrt64\\bin\\g++.exe   -g -o CMakeFiles\\Relation.dir\\lab3.1\\Relation.cpp.obj -c D:\\Repositories\\Discrete_Math\\lab3.1\\Relation.cpp",
   "file": "D:/Repositories/Discrete_Math/lab3.1/Relation.cpp",
   "output": "CMakeFiles/Relation.dir/lab3.1/Relation.cpp.obj"
@@ -19,9 +25,15 @@
 },
 {
   "directory": "D:/Repositories/Discrete_Math/build",
-  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe   -g -o CMakeFiles\\alg.dir\\alg\\alg.cpp.obj -c D:\\Repositories\\Discrete_Math\\alg\\alg.cpp",
-  "file": "D:/Repositories/Discrete_Math/alg/alg.cpp",
-  "output": "CMakeFiles/alg.dir/alg/alg.cpp.obj"
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe   -g -o CMakeFiles\\OrderedSet.dir\\lab3.4\\OrderedSet.cpp.obj -c D:\\Repositories\\Discrete_Math\\lab3.4\\OrderedSet.cpp",
+  "file": "D:/Repositories/Discrete_Math/lab3.4/OrderedSet.cpp",
+  "output": "CMakeFiles/OrderedSet.dir/lab3.4/OrderedSet.cpp.obj"
+},
+{
+  "directory": "D:/Repositories/Discrete_Math/build",
+  "command": "C:\\msys64\\ucrt64\\bin\\g++.exe   -g -o CMakeFiles\\test.dir\\test\\test.cpp.obj -c D:\\Repositories\\Discrete_Math\\test\\test.cpp",
+  "file": "D:/Repositories/Discrete_Math/test/test.cpp",
+  "output": "CMakeFiles/test.dir/test/test.cpp.obj"
 },
 {
   "directory": "D:/Repositories/Discrete_Math/build",

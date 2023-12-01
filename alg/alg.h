@@ -6,7 +6,8 @@
 
 using namespace std;
 
-// template <typename T>
-void outputMatrix(vector<vector<bool>> matrix);
+void outputMatrixBool(vector<vector<bool>> matrix);
+
+void outputMatrixInt(vector<vector<int>> matrix);
 
 #endif //DISCRETE_MATH_ALG_H

@@ -1,7 +1,8 @@
 #include "alg.h"
 
-// template <typename T>
-void outputMatrix(vector<vector<bool>> matrix) {
+template <typename T>
+void outputMatrix(vector<vector<T>> matrix)
+{
     for (auto ai : matrix)
     {
         for (auto aij : ai)
@@ -9,4 +10,14 @@ void outputMatrix(vector<vector<bool>> matrix) {
 
         cout << '\n';
     }
+}
+
+void outputMatrixBool(vector<vector<bool>> matrix)
+{
+    outputMatrix<bool>(matrix);
+}
+
+void outputMatrixInt(vector<vector<int>> matrix)
+{
+    outputMatrix<int>(matrix);
 }

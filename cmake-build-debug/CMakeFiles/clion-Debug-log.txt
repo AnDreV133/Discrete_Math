@@ -1,4 +1,0 @@
-"T:\clion\CLion 2022.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=T:/clion/CLion 2022.2.3/bin/ninja/win/ninja.exe" -G Ninja -S "T:\c github pc\Discrete_Math" -B "T:\c github pc\Discrete_Math\cmake-build-debug"
--- Configuring done
--- Generating done
--- Build files have been written to: T:/c github pc/Discrete_Math/cmake-build-debug

@@ -1,20 +1,9 @@
 #include <iostream>
-#include "lab3.2/TransitivityClosureExperiment.h"
-#include "alg/alg.h"
+
+#include "test/test.h"
 
 int main() {
-    vector<vector<bool>> relation = getRandomRelation(5, 25);
-
-    outputMatrix(relation);
-
-    cout << "\n";
-
-//    for (const auto &a: getTransitiveClosureByWarshellAlgorithmInj(relation)) {
-//        for (auto ai: a)
-//            cout << ai << " ";
-//
-//        cout << "\n";
-//    }
+    run_lab_4_1_5();
 
     return 0;
 }
