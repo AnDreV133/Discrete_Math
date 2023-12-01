@@ -14,5 +14,9 @@
 void run_lab_3_4();
 void run_lab_4_1_1();
 void run_lab_4_1_2();
+void run_lab_4_1_3();
+void run_lab_4_1_4();
+void run_lab_4_1_5();
+
 
 #endif //DISCRETE_MATH_TEST_H

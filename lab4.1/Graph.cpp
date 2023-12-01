@@ -1,4 +1,6 @@
 #include "Graph.h"
+#include <set>
+#include <algorithm>
 
 bool isWay(vector<vector<bool>> graph, vector<int> seq)
 {
@@ -71,15 +73,117 @@ vector<int> getAdjacentTops(vector<vector<bool>> graph, int i)
     return res;
 }
 
-void outputWaysByLength(vector<vector<bool>> graph, int i, int startTop, int length)
+void outputWaysByLength_(vector<vector<bool>> graph, vector<int> way, int i, int length)
 {
-    static vector<int> way(length, startTop - 1);
     for (int x : getAdjacentTops(graph, way[i]))
     {
-        way[i + 1] = x;
-        if (i + 1 == length - 1)
+        if (i + 1 == length)
             outputWay(way);
         else
-            outputWaysByLength(graph, i + 1, startTop, length);
+        {
+            way[i + 1] = x;
+            outputWaysByLength_(graph, way, i + 1, length);
+        }
     }
+}
+
+void outputWaysByLength(vector<vector<bool>> graph, int startTop, int length)
+{
+    vector<int> way(length);
+    way[0] = startTop - 1;
+
+    outputWaysByLength_(graph, way, 0, length);
+}
+
+vector<vector<int>> getMatrixInPow(vector<vector<int>> matrix, int exp)
+{
+    vector<vector<int>> res = matrix; // todo сделать умножение и возведение в степень соотвественно
+    for (size_t e = 2; e <= exp; e++)
+        for (int i = 0; i < matrix.size(); ++i)
+            for (int j = 0; j < matrix.size(); ++j)
+                for (int k = 0; k < matrix.size(); ++k)
+                    res[i][j] += res[i][k] * matrix[k][j];
+
+    return res;
+}
+
+vector<vector<int>> getMatrixOfAmountWays(vector<vector<bool>> graph, int lengthWays)
+{
+    vector<vector<int>> matrix;
+    for (size_t i = 0; i < graph.size(); i++)
+    {
+        vector<int> buf;
+        for (size_t j = 0; j < graph.size(); j++)
+        {
+            buf.push_back(graph[i][j]);
+        }
+
+        matrix.push_back(buf);
+    }
+
+    return getMatrixInPow(matrix, lengthWays);
+}
+
+long long getAmountWaysByLength(vector<vector<bool>> graph, int lengthWays)
+{
+    vector<vector<int>> matrixOfAmountWays = getMatrixOfAmountWays(graph, lengthWays);
+    long long sum = 0;
+    for (size_t i = 0; i < matrixOfAmountWays.size(); i++)
+        for (size_t j = 0; j < matrixOfAmountWays.size(); j++)
+            sum += matrixOfAmountWays[i][j];
+
+    return sum;
+}
+
+void outputWaysByLengthByTops_(vector<vector<bool>> graph, vector<int> way, int i, int length)
+{
+    for (int x : getAdjacentTops(graph, way[i])) // maybe truble
+    {
+        if (i + 1 == length)
+        {
+            if (x == way[i + 1])
+                outputWay(way);
+        }
+        else
+        {
+            way[i + 1] = x;
+            outputWaysByLengthByTops_(graph, way, i + 1, length);
+        }
+    }
+}
+
+void outputWaysByLengthByTops(vector<vector<bool>> graph, int startTop, int endTop, int length)
+{
+    vector<int> way(length);
+    way[0] = startTop - 1;
+    way[length - 1] = endTop - 1;
+
+    outputWaysByLengthByTops_(graph, way, 0, length - 1);
+}
+
+void outputSimpleMaxChains_(vector<vector<bool>> &graph, vector<int> &way, int i, int length, set<int> &includedTops)
+{
+    auto adjacentTops = getAdjacentTops(graph, way[i]);
+    set<int> remainingVertices;
+    set_difference(adjacentTops.begin(), adjacentTops.end(),
+                   includedTops.begin(), includedTops.end(),
+                   inserter(remainingVertices, remainingVertices.begin()));
+    if (i + 1 == length)
+        outputWay(way);
+    else
+        for (const auto &x : remainingVertices)
+        {
+            way[i + 1] = x;
+            includedTops.insert(x);
+            outputSimpleMaxChains_(graph, way, i + 1, length, includedTops);
+            includedTops.erase(x);
+        }
+}
+
+void outputSimpleMaxChains(vector<vector<bool>> graph, int top, int length)
+{
+    vector<int> way(length);
+    way[0] = top - 1;
+    set<int> includedTops = {top - 1};
+    outputSimpleMaxChains_(graph, way, 0, length, includedTops);
 }
