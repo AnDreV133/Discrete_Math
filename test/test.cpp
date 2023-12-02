@@ -5,6 +5,8 @@
 #include "test.h"
 #include "../lab3.4/OrderedSet.h"
 #include "../lab4.1/Graph.h"
+#include "../lab4.2/GraphCheck.h"
+#include <ctime>
 
 void checkBoolFunc(bool b)
 {
@@ -298,4 +300,141 @@ void run_lab_4_1_5()
         {1, 0, 0, 0, 0, 1, 0}};
 
     outputSimpleMaxChains(G2, 3, 6);
+}
+
+void run_lab_4_2_1()
+{
+    for (int n = 8; n <= 10; n++)
+    {
+        cout << "n  m\tEuler\t\tHamiltonian\t\tAll"
+             << "\n";
+        for (int m = n; m <= n * (n - 1) / 2; m++)
+        {
+            clock_t start = clock();
+            size_t allGraphs = 0, eulerGraphs = 0, hamiltonianGraphs = 0;
+            clock_t now = clock();
+            while ((now - start) / CLOCKS_PER_SEC <= 10)
+            {
+                Graph G = generationGraphs(n, m);
+                Graph incG = getIncidence(G);
+                eulerGraphs += isEulerGraph(incG);
+                hamiltonianGraphs += isHamiltonianGraph(incG);
+                allGraphs += 1;
+                now = clock();
+            }
+            cout << n << ' ' << m << "\t" << eulerGraphs << "\t\t"
+                 << hamiltonianGraphs << "\t\t\t" << allGraphs << "\n";
+        }
+        cout << "\n";
+    }
+}
+
+void run_lab_4_2_2()
+{
+    vector<int> a(7, 1);
+    vector<vector<bool>> g = {
+        {0, 1, 1, 0, 0},
+        {1, 0, 1, 0, 0},
+        {1, 1, 0, 1, 1},
+        {0, 0, 1, 0, 1},
+        {0, 0, 1, 1, 0}};
+
+    auto subg = g;
+
+    while (a[0] + a[1] + a[2] + a[3] + a[4] + a[5] + a[6] != 35)
+    {
+        bool flag = true;
+        if (isCycle(g, a))
+        {
+            for (size_t i = 0; i < 6; i++)
+            {
+                subg[a[i] - 1][a[i + 1] - 1] = 0;
+                subg[a[i + 1] - 1][a[i] - 1] = 0;
+            }
+             
+                // outputMatrixBool(subg);
+            
+            for (size_t i = 0; i < 5; i++)
+                for (size_t j = 0; j < 5; j++)
+                    if (subg[i][j] == 1)
+                        flag = false;
+
+            subg = g;
+
+            if (flag)
+            {
+                for (int ai : a)
+                    cout << ai << ' ';
+                cout << '\n';
+            }
+                // cout << '\n';
+
+        }
+
+        for (size_t i = 6; i >= 0; i--)
+        {
+            if (a[i] == 5)
+                a[i] = 1;
+            else
+            {
+                a[i]++;
+                break;
+            }
+        }
+    }
+}
+
+void run_lab_4_2_3()
+{
+    vector<int> a(5, 1);
+    vector<vector<bool>> g = {
+        {0, 1, 1, 0},
+        {1, 0, 0, 1},
+        {1, 0, 0, 1},
+        {0, 1, 1, 0}
+        };
+
+    auto subg = g;
+
+    while (a[0] + a[1] + a[2] + a[3] + a[4] != 20)
+    {
+        bool flag = true;
+        if (isCycle(g, a))
+        {
+            for (size_t i = 0; i < 4; i++)
+            {
+                subg[a[i] - 1][a[i + 1] - 1] = 0;
+                subg[a[i + 1] - 1][a[i] - 1] = 0;
+            }
+             
+                // outputMatrixBool(subg);
+            
+            for (size_t i = 0; i < 4; i++)
+                for (size_t j = 0; j < 4; j++)
+                    if (subg[i][j] == 1)
+                        flag = false;
+
+            subg = g;
+
+            if (flag)
+            {
+                for (int ai : a)
+                    cout << ai << ' ';
+                cout << '\n';
+            }
+                // cout << '\n';
+
+        }
+
+        for (size_t i = 4; i >= 0; i--)
+        {
+            if (a[i] == 4)
+                a[i] = 1;
+            else
+            {
+                a[i]++;
+                break;
+            }
+        }
+    }
 }

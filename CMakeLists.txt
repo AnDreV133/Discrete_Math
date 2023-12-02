@@ -41,6 +41,12 @@ add_library(
 )
 
 add_library(
+        GraphCheck
+        lab4.2/GraphCheck.cpp
+        lab4.2/GraphCheck.h
+)
+
+add_library(
         test
         test/test.cpp
         test/test.h
@@ -60,4 +66,5 @@ target_link_libraries(
         SetFactor
         OrderedSet
         Graph
+        GraphCheck
 )

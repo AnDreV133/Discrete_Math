@@ -1,2 +1,2 @@
-C:\msys64\ucrt64\bin\ar.exe qc libTransitivityClosureExperiment.a CMakeFiles/TransitivityClosureExperiment.dir/lab3.2/TransitivityClosureExperiment.cpp.obj
-C:\msys64\ucrt64\bin\ranlib.exe libTransitivityClosureExperiment.a
+C:/Users/dmitr/gcc/bin/ar.exe qc libTransitivityClosureExperiment.a CMakeFiles/TransitivityClosureExperiment.dir/lab3.2/TransitivityClosureExperiment.cpp.obj
+C:/Users/dmitr/gcc/bin/ranlib.exe libTransitivityClosureExperiment.a
