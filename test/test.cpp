@@ -6,6 +6,7 @@
 #include "../lab3.4/OrderedSet.h"
 #include "../lab4.1/Graph.h"
 #include "../lab4.2/GraphCheck.h"
+#include "../lab4.3/Kruskal.h"
 #include <ctime>
 
 void checkBoolFunc(bool b)
@@ -351,9 +352,9 @@ void run_lab_4_2_2()
                 subg[a[i] - 1][a[i + 1] - 1] = 0;
                 subg[a[i + 1] - 1][a[i] - 1] = 0;
             }
-             
-                // outputMatrixBool(subg);
-            
+
+            // outputMatrixBool(subg);
+
             for (size_t i = 0; i < 5; i++)
                 for (size_t j = 0; j < 5; j++)
                     if (subg[i][j] == 1)
@@ -367,8 +368,7 @@ void run_lab_4_2_2()
                     cout << ai << ' ';
                 cout << '\n';
             }
-                // cout << '\n';
-
+            // cout << '\n';
         }
 
         for (size_t i = 6; i >= 0; i--)
@@ -391,8 +391,7 @@ void run_lab_4_2_3()
         {0, 1, 1, 0},
         {1, 0, 0, 1},
         {1, 0, 0, 1},
-        {0, 1, 1, 0}
-        };
+        {0, 1, 1, 0}};
 
     auto subg = g;
 
@@ -406,9 +405,7 @@ void run_lab_4_2_3()
                 subg[a[i] - 1][a[i + 1] - 1] = 0;
                 subg[a[i + 1] - 1][a[i] - 1] = 0;
             }
-             
-                // outputMatrixBool(subg);
-            
+
             for (size_t i = 0; i < 4; i++)
                 for (size_t j = 0; j < 4; j++)
                     if (subg[i][j] == 1)
@@ -422,8 +419,6 @@ void run_lab_4_2_3()
                     cout << ai << ' ';
                 cout << '\n';
             }
-                // cout << '\n';
-
         }
 
         for (size_t i = 4; i >= 0; i--)
@@ -437,4 +432,24 @@ void run_lab_4_2_3()
             }
         }
     }
+}
+
+void run_lab_4_3_1()
+{
+    Grapf g = {{0, 1, 1},
+               {1, 0, 1},
+               {1, 1, 0}};
+    vector<vector<int>> g2 = getMRows(g);
+    outputMinSetOfVertex(g, g2);
+}
+
+void run_lab_4_3_2()
+{
+    Grapf g = {{0, 1, 1, 0},
+               {1, 0, 1, 0},
+               {1, 1, 0, 1},
+               {0, 0, 1, 0},
+               };
+    vector<vector<int>> g2 = getMRows(g);
+    outputMinSetOfVertex(g, g2);
 }

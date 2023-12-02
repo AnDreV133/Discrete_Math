@@ -47,6 +47,12 @@ add_library(
 )
 
 add_library(
+        Kruskal
+        lab4.3/Kruskal.cpp
+        lab4.3/Kruskal.h
+)
+
+add_library(
         test
         test/test.cpp
         test/test.h
@@ -67,4 +73,5 @@ target_link_libraries(
         OrderedSet
         Graph
         GraphCheck
+        Kruskal
 )
