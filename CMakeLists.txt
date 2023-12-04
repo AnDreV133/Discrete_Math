@@ -59,6 +59,12 @@ add_library(
 )
 
 add_library(
+        Floyd
+        lab4.5/Floyd.cpp
+        lab4.5/Floyd.h
+)
+
+add_library(
         test
         test/test.cpp
         test/test.h
@@ -81,4 +87,5 @@ target_link_libraries(
         GraphCheck
         Kruskal
         Dijkstra
+        Floyd
 )

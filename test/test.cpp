@@ -8,6 +8,7 @@
 #include "../lab4.2/GraphCheck.h"
 #include "../lab4.3/Kruskal.h"
 #include "../lab4.4/Dijkstra.h"
+#include "../lab4.5/Floyd.h"
 #include <ctime>
 
 void checkBoolFunc(bool b)
@@ -466,11 +467,10 @@ void run_lab_4_4()
         {1, 0, 4, 0, 12, 0, 0},
         {0, 8, 4, 12, 0, 8, 1},
         {0, 10, 0, 0, 8, 0, 6},
-        {0, 0, 0, 0, 1, 6, 0}
-    };
+        {0, 0, 0, 0, 1, 6, 0}};
 
     clearAmountsOfPasses(g.size());
-    
+
     Dijkstra(g, 0, 4);
     cout << '\n';
     Dijkstra(g, 3, 0);
@@ -481,4 +481,55 @@ void run_lab_4_4()
     cout << '\n';
 
     cout << "max vertex - " << getVertexOfMaxPasses();
+}
+
+void run_lab_4_5_1()
+{
+    vector<vector<int>> g = {
+        {0, 3, 6, 1, 0, 0, 0},
+        {3, 0, 0, 0, 8, 10, 0},
+        {6, 0, 0, 4, 4, 0, 0},
+        {1, 0, 4, 0, 12, 0, 0},
+        {0, 8, 4, 12, 0, 8, 1},
+        {0, 10, 0, 0, 8, 0, 6},
+        {0, 0, 0, 0, 1, 6, 0}};
+
+    outputMatrixInt(g);
+    cout << '\n';
+
+    g = floyd(g);
+    g = floyd(g);
+    g = floyd(g);
+    g = floyd(g);
+    g = floyd(g);
+    outputMatrixInt(g);
+    cout << '\n';
+    
+    outputMinimalCostTrees(g);
+}
+
+void run_lab_4_5_2()
+{
+    vector<vector<int>> g = {
+        {0, 0, 3, 6, 1, 0, 0, 0},
+        {0, 0, 0, 0, 0, 0, 0, 0},
+        {3, 0, 0, 0, 0, 8, 10, 0},
+        {6, 0, 0, 0, 4, 4, 0, 0},
+        {1, 0, 0, 4, 0, 12, 0, 0},
+        {0, 0, 8, 4, 12, 0, 8, 1},
+        {0, 0, 10, 0, 0, 8, 0, 6},
+        {0, 0, 0, 0, 0, 1, 6, 0}};
+
+    outputMatrixInt(g);
+    cout << '\n';
+
+    g = floyd(g);
+    g = floyd(g);
+    g = floyd(g);
+    g = floyd(g);
+    g = floyd(g);
+    outputMatrixInt(g);
+    cout << '\n';
+    
+    outputMinimalCostTrees(g);
 }

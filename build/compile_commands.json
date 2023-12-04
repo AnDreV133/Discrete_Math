@@ -55,6 +55,12 @@
 },
 {
   "directory": "T:/c github pc/Discrete_Math/build",
+  "command": "C:/Users/dmitr/gcc/bin/c++.exe   -g -o CMakeFiles/Floyd.dir/lab4.5/Floyd.cpp.obj -c \"T:/c github pc/Discrete_Math/lab4.5/Floyd.cpp\"",
+  "file": "T:/c github pc/Discrete_Math/lab4.5/Floyd.cpp",
+  "output": "CMakeFiles/Floyd.dir/lab4.5/Floyd.cpp.obj"
+},
+{
+  "directory": "T:/c github pc/Discrete_Math/build",
   "command": "C:/Users/dmitr/gcc/bin/c++.exe   -g -o CMakeFiles/test.dir/test/test.cpp.obj -c \"T:/c github pc/Discrete_Math/test/test.cpp\"",
   "file": "T:/c github pc/Discrete_Math/test/test.cpp",
   "output": "CMakeFiles/test.dir/test/test.cpp.obj"

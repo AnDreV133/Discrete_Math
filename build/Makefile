@@ -234,6 +234,19 @@ Dijkstra/fast:
 .PHONY : Dijkstra/fast
 
 #=============================================================================
+# Target rules for targets named Floyd
+
+# Build rule for target.
+Floyd: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Floyd
+.PHONY : Floyd
+
+# fast build rule for target.
+Floyd/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Floyd.dir/build.make CMakeFiles/Floyd.dir/build
+.PHONY : Floyd/fast
+
+#=============================================================================
 # Target rules for targets named test
 
 # Build rule for target.
@@ -475,6 +488,30 @@ lab4.4/Dijkstra.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Dijkstra.dir/build.make CMakeFiles/Dijkstra.dir/lab4.4/Dijkstra.cpp.s
 .PHONY : lab4.4/Dijkstra.cpp.s
 
+lab4.5/Floyd.obj: lab4.5/Floyd.cpp.obj
+.PHONY : lab4.5/Floyd.obj
+
+# target to build an object file
+lab4.5/Floyd.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Floyd.dir/build.make CMakeFiles/Floyd.dir/lab4.5/Floyd.cpp.obj
+.PHONY : lab4.5/Floyd.cpp.obj
+
+lab4.5/Floyd.i: lab4.5/Floyd.cpp.i
+.PHONY : lab4.5/Floyd.i
+
+# target to preprocess a source file
+lab4.5/Floyd.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Floyd.dir/build.make CMakeFiles/Floyd.dir/lab4.5/Floyd.cpp.i
+.PHONY : lab4.5/Floyd.cpp.i
+
+lab4.5/Floyd.s: lab4.5/Floyd.cpp.s
+.PHONY : lab4.5/Floyd.s
+
+# target to generate assembly for a file
+lab4.5/Floyd.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Floyd.dir/build.make CMakeFiles/Floyd.dir/lab4.5/Floyd.cpp.s
+.PHONY : lab4.5/Floyd.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -533,6 +570,7 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Dijkstra"
 	@echo "... Discrete_Math"
+	@echo "... Floyd"
 	@echo "... Graph"
 	@echo "... GraphCheck"
 	@echo "... Kruskal"
@@ -569,6 +607,9 @@ help:
 	@echo "... lab4.4/Dijkstra.obj"
 	@echo "... lab4.4/Dijkstra.i"
 	@echo "... lab4.4/Dijkstra.s"
+	@echo "... lab4.5/Floyd.obj"
+	@echo "... lab4.5/Floyd.i"
+	@echo "... lab4.5/Floyd.s"
 	@echo "... main.obj"
 	@echo "... main.i"
 	@echo "... main.s"
