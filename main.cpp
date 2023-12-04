@@ -3,9 +3,7 @@
 #include "test/test.h"
 
 int main() {
-    run_lab_4_3_1();
-    cout << '\n';
-    run_lab_4_3_2();
+    run_lab_4_4();
 
     return 0;
 }

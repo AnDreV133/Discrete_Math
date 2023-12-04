@@ -7,6 +7,7 @@
 #include "../lab4.1/Graph.h"
 #include "../lab4.2/GraphCheck.h"
 #include "../lab4.3/Kruskal.h"
+#include "../lab4.4/Dijkstra.h"
 #include <ctime>
 
 void checkBoolFunc(bool b)
@@ -445,11 +446,39 @@ void run_lab_4_3_1()
 
 void run_lab_4_3_2()
 {
-    Grapf g = {{0, 1, 1, 0},
-               {1, 0, 1, 0},
-               {1, 1, 0, 1},
-               {0, 0, 1, 0},
-               };
+    Grapf g = {
+        {0, 1, 1, 0},
+        {1, 0, 1, 0},
+        {1, 1, 0, 1},
+        {0, 0, 1, 0},
+    };
     vector<vector<int>> g2 = getMRows(g);
     outputMinSetOfVertex(g, g2);
+}
+
+void run_lab_4_4()
+{
+
+    vector<vector<int>> g = {
+        {0, 3, 6, 1, 0, 0, 0},
+        {3, 0, 0, 0, 8, 10, 0},
+        {6, 0, 0, 4, 4, 0, 0},
+        {1, 0, 4, 0, 12, 0, 0},
+        {0, 8, 4, 12, 0, 8, 1},
+        {0, 10, 0, 0, 8, 0, 6},
+        {0, 0, 0, 0, 1, 6, 0}
+    };
+
+    clearAmountsOfPasses(g.size());
+    
+    Dijkstra(g, 0, 4);
+    cout << '\n';
+    Dijkstra(g, 3, 0);
+    cout << '\n';
+    Dijkstra(g, 6, 0);
+    cout << '\n';
+    Dijkstra(g, 3, 5);
+    cout << '\n';
+
+    cout << "max vertex - " << getVertexOfMaxPasses();
 }

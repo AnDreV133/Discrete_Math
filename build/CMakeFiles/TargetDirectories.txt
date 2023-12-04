@@ -5,6 +5,8 @@ T:/c github pc/Discrete_Math/build/CMakeFiles/SetFactor.dir
 T:/c github pc/Discrete_Math/build/CMakeFiles/OrderedSet.dir
 T:/c github pc/Discrete_Math/build/CMakeFiles/Graph.dir
 T:/c github pc/Discrete_Math/build/CMakeFiles/GraphCheck.dir
+T:/c github pc/Discrete_Math/build/CMakeFiles/Kruskal.dir
+T:/c github pc/Discrete_Math/build/CMakeFiles/Dijkstra.dir
 T:/c github pc/Discrete_Math/build/CMakeFiles/test.dir
 T:/c github pc/Discrete_Math/build/CMakeFiles/Discrete_Math.dir
 T:/c github pc/Discrete_Math/build/CMakeFiles/edit_cache.dir

@@ -43,6 +43,18 @@
 },
 {
   "directory": "T:/c github pc/Discrete_Math/build",
+  "command": "C:/Users/dmitr/gcc/bin/c++.exe   -g -o CMakeFiles/Kruskal.dir/lab4.3/Kruskal.cpp.obj -c \"T:/c github pc/Discrete_Math/lab4.3/Kruskal.cpp\"",
+  "file": "T:/c github pc/Discrete_Math/lab4.3/Kruskal.cpp",
+  "output": "CMakeFiles/Kruskal.dir/lab4.3/Kruskal.cpp.obj"
+},
+{
+  "directory": "T:/c github pc/Discrete_Math/build",
+  "command": "C:/Users/dmitr/gcc/bin/c++.exe   -g -o CMakeFiles/Dijkstra.dir/lab4.4/Dijkstra.cpp.obj -c \"T:/c github pc/Discrete_Math/lab4.4/Dijkstra.cpp\"",
+  "file": "T:/c github pc/Discrete_Math/lab4.4/Dijkstra.cpp",
+  "output": "CMakeFiles/Dijkstra.dir/lab4.4/Dijkstra.cpp.obj"
+},
+{
+  "directory": "T:/c github pc/Discrete_Math/build",
   "command": "C:/Users/dmitr/gcc/bin/c++.exe   -g -o CMakeFiles/test.dir/test/test.cpp.obj -c \"T:/c github pc/Discrete_Math/test/test.cpp\"",
   "file": "T:/c github pc/Discrete_Math/test/test.cpp",
   "output": "CMakeFiles/test.dir/test/test.cpp.obj"

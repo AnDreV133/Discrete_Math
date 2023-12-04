@@ -208,6 +208,32 @@ GraphCheck/fast:
 .PHONY : GraphCheck/fast
 
 #=============================================================================
+# Target rules for targets named Kruskal
+
+# Build rule for target.
+Kruskal: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Kruskal
+.PHONY : Kruskal
+
+# fast build rule for target.
+Kruskal/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Kruskal.dir/build.make CMakeFiles/Kruskal.dir/build
+.PHONY : Kruskal/fast
+
+#=============================================================================
+# Target rules for targets named Dijkstra
+
+# Build rule for target.
+Dijkstra: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Dijkstra
+.PHONY : Dijkstra
+
+# fast build rule for target.
+Dijkstra/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Dijkstra.dir/build.make CMakeFiles/Dijkstra.dir/build
+.PHONY : Dijkstra/fast
+
+#=============================================================================
 # Target rules for targets named test
 
 # Build rule for target.
@@ -401,6 +427,54 @@ lab4.2/GraphCheck.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/GraphCheck.dir/build.make CMakeFiles/GraphCheck.dir/lab4.2/GraphCheck.cpp.s
 .PHONY : lab4.2/GraphCheck.cpp.s
 
+lab4.3/Kruskal.obj: lab4.3/Kruskal.cpp.obj
+.PHONY : lab4.3/Kruskal.obj
+
+# target to build an object file
+lab4.3/Kruskal.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Kruskal.dir/build.make CMakeFiles/Kruskal.dir/lab4.3/Kruskal.cpp.obj
+.PHONY : lab4.3/Kruskal.cpp.obj
+
+lab4.3/Kruskal.i: lab4.3/Kruskal.cpp.i
+.PHONY : lab4.3/Kruskal.i
+
+# target to preprocess a source file
+lab4.3/Kruskal.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Kruskal.dir/build.make CMakeFiles/Kruskal.dir/lab4.3/Kruskal.cpp.i
+.PHONY : lab4.3/Kruskal.cpp.i
+
+lab4.3/Kruskal.s: lab4.3/Kruskal.cpp.s
+.PHONY : lab4.3/Kruskal.s
+
+# target to generate assembly for a file
+lab4.3/Kruskal.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Kruskal.dir/build.make CMakeFiles/Kruskal.dir/lab4.3/Kruskal.cpp.s
+.PHONY : lab4.3/Kruskal.cpp.s
+
+lab4.4/Dijkstra.obj: lab4.4/Dijkstra.cpp.obj
+.PHONY : lab4.4/Dijkstra.obj
+
+# target to build an object file
+lab4.4/Dijkstra.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Dijkstra.dir/build.make CMakeFiles/Dijkstra.dir/lab4.4/Dijkstra.cpp.obj
+.PHONY : lab4.4/Dijkstra.cpp.obj
+
+lab4.4/Dijkstra.i: lab4.4/Dijkstra.cpp.i
+.PHONY : lab4.4/Dijkstra.i
+
+# target to preprocess a source file
+lab4.4/Dijkstra.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Dijkstra.dir/build.make CMakeFiles/Dijkstra.dir/lab4.4/Dijkstra.cpp.i
+.PHONY : lab4.4/Dijkstra.cpp.i
+
+lab4.4/Dijkstra.s: lab4.4/Dijkstra.cpp.s
+.PHONY : lab4.4/Dijkstra.s
+
+# target to generate assembly for a file
+lab4.4/Dijkstra.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Dijkstra.dir/build.make CMakeFiles/Dijkstra.dir/lab4.4/Dijkstra.cpp.s
+.PHONY : lab4.4/Dijkstra.cpp.s
+
 main.obj: main.cpp.obj
 .PHONY : main.obj
 
@@ -457,9 +531,11 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... Dijkstra"
 	@echo "... Discrete_Math"
 	@echo "... Graph"
 	@echo "... GraphCheck"
+	@echo "... Kruskal"
 	@echo "... OrderedSet"
 	@echo "... Relation"
 	@echo "... SetFactor"
@@ -487,6 +563,12 @@ help:
 	@echo "... lab4.2/GraphCheck.obj"
 	@echo "... lab4.2/GraphCheck.i"
 	@echo "... lab4.2/GraphCheck.s"
+	@echo "... lab4.3/Kruskal.obj"
+	@echo "... lab4.3/Kruskal.i"
+	@echo "... lab4.3/Kruskal.s"
+	@echo "... lab4.4/Dijkstra.obj"
+	@echo "... lab4.4/Dijkstra.i"
+	@echo "... lab4.4/Dijkstra.s"
 	@echo "... main.obj"
 	@echo "... main.i"
 	@echo "... main.s"

@@ -100,6 +100,8 @@ Discrete_Math.exe: libSetFactor.a
 Discrete_Math.exe: libOrderedSet.a
 Discrete_Math.exe: libGraph.a
 Discrete_Math.exe: libGraphCheck.a
+Discrete_Math.exe: libKruskal.a
+Discrete_Math.exe: libDijkstra.a
 Discrete_Math.exe: CMakeFiles/Discrete_Math.dir/linkLibs.rsp
 Discrete_Math.exe: CMakeFiles/Discrete_Math.dir/objects1.rsp
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="T:/c github pc/Discrete_Math/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable Discrete_Math.exe"

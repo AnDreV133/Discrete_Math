@@ -22,6 +22,7 @@ void run_lab_4_2_2();
 void run_lab_4_2_3();
 void run_lab_4_3_1();
 void run_lab_4_3_2();
+void run_lab_4_4();
 
 
 #endif //DISCRETE_MATH_TEST_H

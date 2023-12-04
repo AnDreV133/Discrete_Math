@@ -53,6 +53,12 @@ add_library(
 )
 
 add_library(
+        Dijkstra
+        lab4.4/Dijkstra.cpp
+        lab4.4/Dijkstra.h
+)
+
+add_library(
         test
         test/test.cpp
         test/test.h
@@ -74,4 +80,5 @@ target_link_libraries(
         Graph
         GraphCheck
         Kruskal
+        Dijkstra
 )
