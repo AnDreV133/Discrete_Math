@@ -137,7 +137,7 @@ long long getAmountWaysByLength(vector<vector<bool>> graph, int lengthWays)
 
 void outputWaysByLengthByTops_(vector<vector<bool>> graph, vector<int> way, int i, int length)
 {
-    for (int x : getAdjacentTops(graph, way[i])) // maybe truble
+    for (int x : getAdjacentTops(graph, way[i]))
     {
         if (i + 1 == length)
         {
@@ -147,7 +147,7 @@ void outputWaysByLengthByTops_(vector<vector<bool>> graph, vector<int> way, int 
         else
         {
             way[i + 1] = x;
-            outputWaysByLengthByTops_(graph, way, i + 1, length);
+            outputWaysByLengthByTops_(graph, way, i + 1, length); 
         }
     }
 }

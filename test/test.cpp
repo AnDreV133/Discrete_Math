@@ -305,6 +305,21 @@ void run_lab_4_1_5()
     outputSimpleMaxChains(G2, 3, 6);
 }
 
+void run_lab_4_1_6()
+{
+    vector<vector<bool>> G1 = {
+        {0, 1, 0, 1, 1, 1, 1},
+        {1, 0, 1, 0, 1, 1, 0},
+        {0, 1, 0, 1, 0, 0, 0},
+        {1, 0, 1, 0, 0, 0, 0},
+        {1, 1, 0, 0, 0, 0, 0},
+        {1, 1, 0, 0, 0, 0, 1},
+        {1, 0, 0, 0, 0, 1, 0}};
+
+    for (size_t j = 2; j <= G1.size(); j++)
+        for (size_t i = 1; i <= G1.size(); i++)
+            outputSimpleMaxChains(G1, i, j);
+}
 void run_lab_4_2_1()
 {
     for (int n = 8; n <= 10; n++)
@@ -436,6 +451,21 @@ void run_lab_4_2_3()
     }
 }
 
+void run_lab_4_2_4()
+{
+    Graph g = {
+        {0, 1, 1, 0, 0, 0},
+        {1, 0, 1, 0, 0, 0},
+        {1, 1, 0, 0, 0, 0},
+        {0, 0, 0, 0, 1, 1},
+        {0, 0, 0, 1, 0, 1},
+        {0, 0, 0, 1, 1, 0},
+    };
+
+    cout << "is Hamiltonian Graph: " << isHamiltonianGraph(g) << '\n';
+    cout << "is Euler Graph: " << isEulerGraph(g) << '\n';
+}
+
 void run_lab_4_3_1()
 {
     Grapf g = {{0, 1, 1},
@@ -457,7 +487,7 @@ void run_lab_4_3_2()
     outputMinSetOfVertex(g, g2);
 }
 
-void run_lab_4_4()
+void run_lab_4_4_1()
 {
 
     vector<vector<int>> g = {
@@ -471,13 +501,29 @@ void run_lab_4_4()
 
     clearAmountsOfPasses(g.size());
 
-    Dijkstra(g, 0, 4);
+    Dijkstra(g, 0);
     cout << '\n';
-    Dijkstra(g, 3, 0);
+    Dijkstra(g, 3);
     cout << '\n';
-    Dijkstra(g, 6, 0);
+    Dijkstra(g, 6);
     cout << '\n';
-    Dijkstra(g, 3, 5);
+    Dijkstra(g, 4);
+    cout << '\n';
+
+    cout << "max vertex - " << getVertexOfMaxPasses() << '\n';
+}
+
+void run_lab_4_4_2()
+{
+
+    vector<vector<int>> g = {
+        {0, 2, 20},
+        {2, 0, 3},
+        {20, 3, 0}};
+
+    clearAmountsOfPasses(g.size());
+
+    Dijkstra(g, 0);
     cout << '\n';
 
     cout << "max vertex - " << getVertexOfMaxPasses();
@@ -497,14 +543,14 @@ void run_lab_4_5_1()
     outputMatrixInt(g);
     cout << '\n';
 
-    g = floyd(g);
-    g = floyd(g);
-    g = floyd(g);
-    g = floyd(g);
-    g = floyd(g);
-    outputMatrixInt(g);
-    cout << '\n';
-    
+    // g = floyd(g).weights;
+    // g = floyd(g).weights;
+    // g = floyd(g).weights;
+    // g = floyd(g).weights;
+    // g = floyd(g).weights;
+    // outputMatrixInt(g);
+    // cout << '\n';
+
     outputMinimalCostTrees(g);
 }
 
@@ -520,16 +566,17 @@ void run_lab_4_5_2()
         {0, 0, 10, 0, 0, 8, 0, 6},
         {0, 0, 0, 0, 0, 1, 6, 0}};
 
+    auto gCopy = g;
     outputMatrixInt(g);
     cout << '\n';
 
-    g = floyd(g);
-    g = floyd(g);
-    g = floyd(g);
-    g = floyd(g);
-    g = floyd(g);
-    outputMatrixInt(g);
-    cout << '\n';
-    
-    outputMinimalCostTrees(g);
+    // g = floyd(g).weights;
+    // g = floyd(g).weights;
+    // g = floyd(g).weights;
+    // g = floyd(g).weights;
+    // g = floyd(g).weights;
+    // outputMatrixInt(g);
+    // cout << '\n';
+
+    outputMinimalCostTrees(gCopy);
 }
