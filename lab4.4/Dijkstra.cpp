@@ -8,7 +8,7 @@
 
 vector<int> amountsOfPasses;
 
-void Dijkstra(vector<vector<int>> weightedGraph, int startVertex, int endVertex)
+void Dijkstra(vector<vector<int>> weightedGraph, int startVertex)
 {
     bool visited[weightedGraph.size()];
     int D[weightedGraph.size()];
@@ -34,10 +34,10 @@ void Dijkstra(vector<vector<int>> weightedGraph, int startVertex, int endVertex)
             }
         }
 
-        if (minIndex == endVertex)
-        {
-            break;
-        }
+        // if (minIndex == endVertex)
+        // {
+        //     break;
+        // }
 
         if (D[minIndex] == INT_MAX)
             continue;
@@ -54,10 +54,13 @@ void Dijkstra(vector<vector<int>> weightedGraph, int startVertex, int endVertex)
         }
     }
 
-    u = endVertex;
-    stack<int> s;
-    if (prev[u] != -1 || u == startVertex)
+    for (size_t i = 0; i < weightedGraph.size(); i++)
     {
+        if(i == startVertex)
+            continue;
+
+        u = i;
+        stack<int> s;
         while (u != -1)
         {
             s.emplace(u);
@@ -66,12 +69,13 @@ void Dijkstra(vector<vector<int>> weightedGraph, int startVertex, int endVertex)
 
             u = prev[u];
         }
-    }
 
-    while (!s.empty())
-    {
-        cout << s.top() << ' ';
-        s.pop();
+        while (!s.empty())
+        {
+            cout << s.top() << ' ';
+            s.pop();
+        }
+        cout << '\n';
     }
 }
 
@@ -83,9 +87,11 @@ void clearAmountsOfPasses(int n)
 int getVertexOfMaxPasses()
 {
     int res = 0;
-    for (auto v : amountsOfPasses)
-        if (v > res)
-            res = v;
-
+    for (size_t i = 0; i < amountsOfPasses.size(); i++)
+    {
+        if (amountsOfPasses[i] > amountsOfPasses[res])
+            res = i;
+    }
+     
     return res;
 }

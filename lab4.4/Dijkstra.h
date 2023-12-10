@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void Dijkstra(vector<vector<int>> weightedGraph, int startVertex, int endVertex);
+void Dijkstra(vector<vector<int>> weightedGraph, int startVertex);
 void clearAmountsOfPasses(int n);
 int getVertexOfMaxPasses();
 
