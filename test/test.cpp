@@ -543,14 +543,6 @@ void run_lab_4_5_1()
     outputMatrixInt(g);
     cout << '\n';
 
-    // g = floyd(g).weights;
-    // g = floyd(g).weights;
-    // g = floyd(g).weights;
-    // g = floyd(g).weights;
-    // g = floyd(g).weights;
-    // outputMatrixInt(g);
-    // cout << '\n';
-
     outputMinimalCostTrees(g);
 }
 
@@ -566,17 +558,8 @@ void run_lab_4_5_2()
         {0, 0, 10, 0, 0, 8, 0, 6},
         {0, 0, 0, 0, 0, 1, 6, 0}};
 
-    auto gCopy = g;
     outputMatrixInt(g);
     cout << '\n';
 
-    // g = floyd(g).weights;
-    // g = floyd(g).weights;
-    // g = floyd(g).weights;
-    // g = floyd(g).weights;
-    // g = floyd(g).weights;
-    // outputMatrixInt(g);
-    // cout << '\n';
-
-    outputMinimalCostTrees(gCopy);
+    outputMinimalCostTrees(g);
 }
