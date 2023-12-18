@@ -16,14 +16,14 @@ bool isWay(vector<vector<bool>> graph, vector<int> seq)
 
 bool isChain(vector<vector<bool>> graph, vector<int> seq)
 {
-    int buf[MAX_SIZE_BUF] = {0};
+    vector<int> buf[MAX_SIZE_BUF];
     int i = 0;
     while (i < (seq.size() - 1))
     {
-        if (!(graph[seq[i] - 1][seq[i + 1] - 1]) || buf[seq[i] - 1] == seq[i + 1])
+        if (!(graph[seq[i] - 1][seq[i + 1] - 1]) || find(buf[seq[i] - 1].begin(), buf[seq[i] - 1].end(), seq[i + 1]) != buf[seq[i] - 1].end())
             return false;
 
-        buf[seq[i] - 1] = seq[i + 1];
+        buf[seq[i] - 1].push_back(seq[i + 1]);
         i++;
     }
     return true;
@@ -46,7 +46,7 @@ bool isSimpleChain(vector<vector<bool>> graph, vector<int> seq)
 
 bool isCycle(vector<vector<bool>> graph, vector<int> seq)
 {
-    return isWay(graph, seq) && seq[0] == seq[seq.size() - 1];
+    return isChain(graph, seq) && seq[0] == seq[seq.size() - 1];
 }
 
 bool isSimpleCycle(vector<vector<bool>> graph, vector<int> seq)
